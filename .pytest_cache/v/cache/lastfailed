@@ -1,7 +1,1 @@
-{
-  "python/pangram/pangram_test.py::PangramTest::test_mixed_case_and_punctuation": true,
-  "python/pangram/pangram_test.py::PangramTest::test_only_lower_case": true,
-  "python/pangram/pangram_test.py::PangramTest::test_perfect_lower_case": true,
-  "python/pangram/pangram_test.py::PangramTest::test_with_numbers": true,
-  "python/pangram/pangram_test.py::PangramTest::test_with_underscores": true
-}
+{}
