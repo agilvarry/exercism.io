@@ -27,10 +27,6 @@
   "python/raindrops/raindrops_test.py::RaindropsTest::test_the_sound_for_6_is_pling_as_it_has_a_factor_3",
   "python/raindrops/raindrops_test.py::RaindropsTest::test_the_sound_for_7_is_plong",
   "python/raindrops/raindrops_test.py::RaindropsTest::test_the_sound_for_9_is_pling_as_it_has_a_factor_3",
-  "python/robot-name/robot_name_test.py::RobotNameTest::test_different_robots_have_different_names",
-  "python/robot-name/robot_name_test.py::RobotNameTest::test_has_name",
-  "python/robot-name/robot_name_test.py::RobotNameTest::test_name_sticks",
-  "python/robot-name/robot_name_test.py::RobotNameTest::test_reset_name",
   "python/series/series_test.py::SeriesTest::test_empty_series_is_invalid",
   "python/series/series_test.py::SeriesTest::test_slice_length_cannot_be_negative",
   "python/series/series_test.py::SeriesTest::test_slice_length_cannot_be_zero",
@@ -40,5 +36,9 @@
   "python/series/series_test.py::SeriesTest::test_slices_of_one_from_one",
   "python/series/series_test.py::SeriesTest::test_slices_of_one_from_two",
   "python/series/series_test.py::SeriesTest::test_slices_of_two",
-  "python/series/series_test.py::SeriesTest::test_slices_of_two_overlap"
+  "python/series/series_test.py::SeriesTest::test_slices_of_two_overlap",
+  "python/robot-name/robot_name_test.py::RobotNameTest::test_different_robots_have_different_names",
+  "python/robot-name/robot_name_test.py::RobotNameTest::test_has_name",
+  "python/robot-name/robot_name_test.py::RobotNameTest::test_name_sticks",
+  "python/robot-name/robot_name_test.py::RobotNameTest::test_reset_name"
 ]
