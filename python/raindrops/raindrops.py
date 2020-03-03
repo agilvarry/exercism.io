@@ -5,7 +5,5 @@ def convert(number):
     if number %5 ==0:
         rain+= "Plang"
     if number %7 ==0:
-        rain += "Plong"
-    if not rain:
-        rain = str(number)    
-    return rain    
+        rain += "Plong"  
+    return rain or str(number)    
