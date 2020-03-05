@@ -11,7 +11,7 @@ export const resistor = {
     "white": "9"
 }
 
-export const  decodedValue = (vals) =>{ 
-    let val = resistor[vals[0]] + resistor[vals[1]]
+export const  decodedValue = ([color1, color2]) =>{ 
+    let val = resistor[color1] + resistor[color2]
     return parseInt(val)
 }
