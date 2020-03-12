@@ -1,22 +1,50 @@
-//
-// This is only a SKELETON file for the 'Triangle' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-
 export class Triangle {
-  constructor() {
-    throw new Error("Remove this statement and implement this function");
+  constructor(a, b, c) {
+    this.a = a
+    this.b = b
+    this.c = c
   }
 
   isEquilateral() {
-    throw new Error("Remove this statement and implement this function");
+    if(!this.nonZeros() || !this.equalityRule()){
+      return false
+     } else {
+     return this.a == this.b && this.b == this.c
+    }
   }
 
   isIsosceles() {
-    throw new Error("Remove this statement and implement this function");
+    if(!this.nonZeros() || !this.equalityRule()){
+      return false
+     }else {
+    return this.a==this.b || this.b == this.c || this.c == this.a
+    }
   }
 
   isScalene() {
-    throw new Error("Remove this statement and implement this function");
+   if(!this.nonZeros() || !this.equalityRule()){
+    return false
+   }else{
+      return this.a != this.b && this.b != this.c && this.a != this.c
+    }
+  }
+
+  equalityRule(){
+    if(this.a+this.b < this.c){
+      return false
+    }else if(this.a+this.c < this.b){
+      return false
+    } else if(this.c+this.b < this.a){
+      return false
+    } else{
+      return true
+    }
+  }
+  nonZeros(){
+    if (this.a<=0 || this.b<=0 || this.c<=0){
+      return false
+    } else{
+      return true
+    }
   }
 }
