@@ -4,16 +4,33 @@ export class Triangle {
   }
 
   isEquilateral() {
-    return this.nonZeros() && this.equalityRule()  && this.sides.every(length => length == this.a)
+    return this.isValid()  && this.sameLengthSides() === 3
   }
 
   isIsosceles() {
-    return this.nonZeros() && this.equalityRule() && (this.a==this.b || this.b == this.c || this.c == this.a)
+    return this.isValid() && this.sameLengthSides() >= 2
   }
 
   isScalene() {
-    return this.nonZeros() && this.equalityRule() && (this.a != this.b && this.b != this.c && this.a != this.c)
+    return this.isValid() && this.sameLengthSides() === 0
   }
+  
+  sameLengthSides(){
+    let counts = {};
+    this.sides.forEach((x) => { counts[x] = (counts[x] || 0)+1 })
+    
+    let same = 1
+    for (let side of Object.values(counts)) {
+      same = Math.max(same, side)
+    }
+    
+    return same >1 ? same : 0
+  }
+
+  isValid(){
+    return this.nonZeros() && this.equalityRule()
+  }
+
   sortNumber(a, b) {
     return a - b;
   }
