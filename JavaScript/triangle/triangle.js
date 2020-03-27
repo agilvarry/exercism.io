@@ -4,7 +4,7 @@ export class Triangle {
   }
 
   isEquilateral() {
-    return this.nonZeros() && this.equalityRule()  && (this.a == this.b && this.b == this.c)
+    return this.nonZeros() && this.equalityRule()  && this.sides.every(length => length == this.a)
   }
 
   isIsosceles() {
@@ -14,9 +14,12 @@ export class Triangle {
   isScalene() {
     return this.nonZeros() && this.equalityRule() && (this.a != this.b && this.b != this.c && this.a != this.c)
   }
-
+  sortNumber(a, b) {
+    return a - b;
+  }
   equalityRule(){
-    return this.a+this.b > this.c && this.a+this.c > this.b && this.c+this.b > this.a
+    const [a,b,c] = this.sides.sort(this.sortNumber)
+    return a + b > c
   }
   nonZeros(){
     return this.sides.every(length => length > 0)

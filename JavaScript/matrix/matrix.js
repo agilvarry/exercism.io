@@ -4,15 +4,36 @@
 //
 
 export class Matrix {
-  constructor() {
-    throw new Error("Remove this statement and implement this function");
+  constructor(matrixString = "") {
+    this.matrix = []
+    this.matrixColumns = []
+    this.parseMatrix(matrixString)
+  }
+
+  parseMatrix(matrixString){
+    matrixString.split("\n").forEach(array => this.parseArray(array)) 
+  }
+  parseArray(arrayString){
+    let numArray = arrayString.split(" ").map(x=> Number(x))
+    this.matrix.push(numArray)
+  }
+
+  parseColumns(row){
+    for(let index=0; index<row.length; index++){
+      this.matrixColumns.length < index+1 && this.matrixColumns.push(new Array()) 
+      this.matrixColumns[index].push(row[index])
+    }
+      
   }
 
   get rows() {
-    throw new Error("Remove this statement and implement this function");
+    return this.matrix
   }
 
   get columns() {
-    throw new Error("Remove this statement and implement this function");
+    this.matrix.forEach(row => this.parseColumns(row))
+    return this.matrixColumns
   }
+
+
 }

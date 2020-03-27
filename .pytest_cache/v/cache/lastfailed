@@ -1,3 +1,6 @@
 {
-  "python/matrix/matrix_test.py": true
+  "python/perfect-numbers/perfect_numbers_test.py::AbundantNumbersTest": true,
+  "python/perfect-numbers/perfect_numbers_test.py::DeficientNumbersTest": true,
+  "python/perfect-numbers/perfect_numbers_test.py::InvalidInputsTest": true,
+  "python/perfect-numbers/perfect_numbers_test.py::PerfectNumbersTest": true
 }
