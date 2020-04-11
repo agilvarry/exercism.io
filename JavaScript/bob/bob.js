@@ -1,9 +1,14 @@
-/* eslint-disable no-unused-vars */
-//
-// This is only a SKELETON file for the 'Bob' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-
 export const hey = (message) => {
-  throw new Error("Remove this statement and implement this function");
+  const noSpace = message.trim()
+  const onlyAlpha = noSpace.replace(/[^a-zA-Z]/g, '')
+  let response =""
+  const yelling = onlyAlpha == onlyAlpha.toUpperCase() && onlyAlpha.length >0
+  
+  if(!yelling && noSpace.slice(-1) == "?"){ response = "Sure."}
+  else if(yelling &&noSpace.slice(-1) == "?"){response = "Calm down, I know what I'm doing!"}
+  else if ( yelling && onlyAlpha.length > 0){response = 'Whoa, chill out!'}
+  else if(noSpace.slice(-1) == "." || noSpace.length > 0){ response =  'Whatever.'}
+  else{ response = 'Fine. Be that way!'}
+
+  return response
 };
